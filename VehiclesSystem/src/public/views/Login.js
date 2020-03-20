@@ -14,10 +14,7 @@ export default class Login extends Component{
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
-                <StatusBar 
-                    backgroundColor="#2e87c2"
-                    barStyle="dark-content"
-                />
+                
                 <View style={styles.logoContainer}>
                     <Image style={styles.logo} source={require('../../../assets/orangeCar.png')}/>
                 </View>

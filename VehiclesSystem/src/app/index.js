@@ -1,18 +1,25 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import PublicRouter from '../public/routes/PublicRouter';
 
-
-const AppStackNavigator = PublicRouter;
-
-const Apps = createAppContainer(AppStackNavigator)
+import Login from '../public/views/Login';
+import { View, StatusBar, StyleSheet } from 'react-native';
 
 export default class App extends React.Component {
     render() {
-        return <Apps />;
+        return( 
+            <View style={styles.container}>
+                <StatusBar 
+                    backgroundColor="#2e87c2"
+                    barStyle="light-content"
+                />
+                <Login />    
+            </View>
+        );
     }
 }
 
-// const App = () => <PublicRouter />;
-
-// export default App;
+const styles =  StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#3498db'
+    },
+});
