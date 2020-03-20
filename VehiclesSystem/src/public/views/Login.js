@@ -17,6 +17,7 @@ export default class Login extends Component{
                 
                 <View style={styles.logoContainer}>
                     <Image style={styles.logo} source={require('../../../assets/orangeCar.png')}/>
+                    <Text style={styles.logoText}>Liste Meus Carros!</Text>
                 </View>
                 <View style={styles.formContainer}>
                     <TextInput 
@@ -45,16 +46,18 @@ export default class Login extends Component{
 const styles =  StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#3498db'
+        justifyContent: 'center'
     },
     logoContainer: {
-        alignItems: 'center',
-        flexGrow: 1,
-        justifyContent: 'center'
+        alignItems: 'center',    
     },    
     logo: {
         width: 300,
         height: 121
+    },
+    logoText: {
+        fontSize: 18,
+        color: 'rgba(255,255,255,0.7)'
     },
     formContainer: {
         padding: 20
