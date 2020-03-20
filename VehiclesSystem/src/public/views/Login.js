@@ -55,6 +55,8 @@ const styles =  StyleSheet.create({
         justifyContent: 'center'
     },
     logoContainer: {
+        flexGrow: 1,
+        justifyContent: 'flex-end',
         alignItems: 'center',    
     },    
     logo: {
@@ -85,5 +87,23 @@ const styles =  StyleSheet.create({
         textAlign: 'center',
         color: '#fff',
         fontWeight: '700'
+    },
+    forgotPasswordContainer: {       
+       alignItems: 'center',
+    },
+    forgotPasswordText: {
+      color: '#fff',
+      fontWeight: '700',
+      fontSize: 17  
+    },
+    signupTextContainer: {
+       flexGrow: 1,
+       alignItems: 'center',
+       justifyContent: 'flex-end',
+       marginVertical: 16 
+    },
+    signupText: {
+        color: 'rgba(255,255,255,0.7)',
+        fontSize: 16
     }
 });
