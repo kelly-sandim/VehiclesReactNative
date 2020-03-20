@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image } from 'react-native';
 
 export default class Login extends Component{
     render() {
         return(
             <View style={styles.container}>
-                <Text>Página de Login</Text>
+                <View style={styles.logoContainer}></View>
+                <View style={styles.formContainer}></View>
             </View>
         );
     }
