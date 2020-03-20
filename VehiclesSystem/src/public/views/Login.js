@@ -19,7 +19,7 @@ export default class Login extends Component{
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         style={styles.input} />
                     <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>Login</Text>
+                        <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -50,5 +50,13 @@ const styles =  StyleSheet.create({
         marginBottom: 20,
         color: '#fff',
         paddingHorizontal: 10
+    },
+    buttonContainer: {
+        backgroundColor: '#276b98',
+        paddingVertical: 15
+    },
+    buttonText: {
+        textAlign: 'center',
+        color: '#fff'
     }
 });
