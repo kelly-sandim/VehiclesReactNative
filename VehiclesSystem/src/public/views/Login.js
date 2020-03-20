@@ -38,6 +38,12 @@ export default class Login extends Component{
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
+                <View style={styles.forgotPasswordContainer}>
+                    <Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text>
+                </View>
+                <View style={styles.signupTextContainer}>
+                    <Text style={styles.signupText}>Não tem uma conta ainda? Então Registre-se</Text>
+                </View>
             </KeyboardAvoidingView>
         );
     }
