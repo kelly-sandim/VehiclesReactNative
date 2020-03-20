@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { View, Text, StyleSheet, TextInput, Image } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native';
 
 export default class Login extends Component{
     render() {
@@ -18,6 +18,9 @@ export default class Login extends Component{
                         placeholder="Senha"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         style={styles.input} />
+                    <TouchableOpacity style={styles.buttonContainer}>
+                        <Text style={styles.buttonText}>Login</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );
