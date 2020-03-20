@@ -1,6 +1,6 @@
 import React from 'react';
-import RouterConfig from './RouterConfig';
+import PublicRouter from '../public/routes/PublicRouter';
 
-const App = () => <RouterConfig />;
+const App = () => <PublicRouter />;
 
 export default App;
