@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 
 export default class Login extends Component{
     render() {
         return(
-            <View style={styles.container}>
+            <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <View style={styles.logoContainer}>
                     <Image style={styles.logo} source={require('../../../assets/orangeCar.png')}/>
                 </View>
@@ -13,17 +13,22 @@ export default class Login extends Component{
                     <TextInput 
                         placeholder="E-mail"
                         placeholderTextColor="rgba(255,255,255,0.7)"
+                        returnKeyType="next"
+                        keyboardType="email-address"
+                        autoCapitalize="none"
+                        autoCorrect={false}
                         style={styles.input} />
                     <TextInput 
                         placeholder="Senha"
                         placeholderTextColor="rgba(255,255,255,0.7)"
+                        returnKeyType="go"
                         secureTextEntry
                         style={styles.input} />
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 }
