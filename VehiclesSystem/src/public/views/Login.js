@@ -17,6 +17,7 @@ export default class Login extends Component{
                     <TextInput 
                         placeholder="Senha"
                         placeholderTextColor="rgba(255,255,255,0.7)"
+                        secureTextEntry
                         style={styles.input} />
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text style={styles.buttonText}>LOGIN</Text>
@@ -57,6 +58,7 @@ const styles =  StyleSheet.create({
     },
     buttonText: {
         textAlign: 'center',
-        color: '#fff'
+        color: '#fff',
+        fontWeight: '700'
     }
 });
