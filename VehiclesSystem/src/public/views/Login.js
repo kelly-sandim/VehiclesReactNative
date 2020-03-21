@@ -42,7 +42,8 @@ export default class Login extends Component{
                     <Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text>
                 </View>
                 <View style={styles.signupTextContainer}>
-                    <Text style={styles.signupText}>Não tem uma conta ainda? Então Registre-se</Text>
+                    <Text style={styles.signupText}>Não tem uma conta ainda? Então</Text>
+                    <Text style={styles.signupButton}> Registre-se</Text>
                 </View>
             </KeyboardAvoidingView>
         );
@@ -98,12 +99,18 @@ const styles =  StyleSheet.create({
     },
     signupTextContainer: {
        flexGrow: 1,
-       alignItems: 'center',
-       justifyContent: 'flex-end',
-       marginVertical: 16 
+       alignItems: 'flex-end',
+       justifyContent: 'center',
+       paddingVertical: 16,
+       flexDirection: 'row'
     },
     signupText: {
         color: 'rgba(255,255,255,0.7)',
         fontSize: 16
+    },
+    signupButton: {
+        color: '#ffffff',
+        fontSize: 16,
+        fontWeight: '700'
     }
 });
