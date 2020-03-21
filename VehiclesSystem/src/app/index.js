@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Login from '../public/views/Login';
+import Register from '../public/views/Register';
 import { View, StatusBar, StyleSheet } from 'react-native';
 
 export default class App extends React.Component {
@@ -11,7 +12,7 @@ export default class App extends React.Component {
                     backgroundColor="#2e87c2"
                     barStyle="light-content"
                 />
-                <Login />    
+                <Register />    
             </View>
         );
     }

@@ -21,6 +21,12 @@ export default class Login extends Component{
                 </View>
                 <View style={styles.formContainer}>
                     <TextInput 
+                        placeholder="Nome"
+                        placeholderTextColor="rgba(255,255,255,0.7)"
+                        returnKeyType="next"
+                        style={styles.input}
+                    />
+                    <TextInput 
                         placeholder="E-mail"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         returnKeyType="next"
@@ -35,15 +41,12 @@ export default class Login extends Component{
                         secureTextEntry
                         style={styles.input} />
                     <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>LOGIN</Text>
+                        <Text style={styles.buttonText}>REGISTRAR</Text>
                     </TouchableOpacity>
-                </View>
-                <View style={styles.forgotPasswordContainer}>
-                    <Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text>
-                </View>
+                </View>                
                 <View style={styles.signupTextContainer}>
                     <Text style={styles.signupText}>Já possui uma conta? Então</Text>
-                    <Text style={styles.signupButton}> faça Login</Text>
+                    <Text style={styles.signupButton}> faça o Login</Text>
                 </View>
             </KeyboardAvoidingView>
         );
