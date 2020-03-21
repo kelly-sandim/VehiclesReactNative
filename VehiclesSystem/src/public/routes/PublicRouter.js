@@ -3,7 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Login from '../views/Login';
 import Register from '../views/Register';
 
-export default createStackNavigator({
+const PublicRouter = createStackNavigator({
     Home: {
         screen: Login
     },
@@ -11,3 +11,5 @@ export default createStackNavigator({
         screen: Register
     }        
 });
+
+export default PublicRouter;

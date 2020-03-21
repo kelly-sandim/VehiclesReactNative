@@ -10,6 +10,8 @@ import { View,
     StatusBar
 } from 'react-native';
 
+import PublicRouter from '../routes/PublicRouter';
+
 export default class Login extends Component{
     render() {
         return(
