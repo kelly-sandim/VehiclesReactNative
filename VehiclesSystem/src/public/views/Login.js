@@ -16,7 +16,10 @@ export default class Login extends Component{
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
-                
+                <StatusBar 
+                    backgroundColor="#2e87c2"
+                    barStyle="light-content"
+                />
                 <View style={styles.logoContainer}>
                     <Image style={styles.logo} source={require('../../../assets/orangeCar.png')}/>
                     <Text style={styles.logoText}>Liste Meus Carros!</Text>
@@ -54,6 +57,7 @@ export default class Login extends Component{
 
 const styles =  StyleSheet.create({
     container: {
+        backgroundColor: '#3498db',
         flex: 1,
         justifyContent: 'center'
     },
