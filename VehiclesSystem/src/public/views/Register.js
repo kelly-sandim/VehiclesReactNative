@@ -49,7 +49,7 @@ export default class Login extends Component{
                 </View>                
                 <View style={styles.signupTextContainer}>
                     <Text style={styles.signupText}>Já possui uma conta? Então</Text>
-                    <Text style={styles.signupButton}> faça o Login</Text>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('Login') } ><Text style={styles.signupButton}> faça o Login</Text></TouchableOpacity>
                 </View>
             </KeyboardAvoidingView>
         );

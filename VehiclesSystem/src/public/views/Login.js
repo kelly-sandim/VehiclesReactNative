@@ -10,9 +10,8 @@ import { View,
     StatusBar
 } from 'react-native';
 
-import PublicRouter from '../routes/PublicRouter';
+export default class Login extends Component{  
 
-export default class Login extends Component{
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -48,7 +47,7 @@ export default class Login extends Component{
                 </View>
                 <View style={styles.signupTextContainer}>
                     <Text style={styles.signupText}>Não tem uma conta ainda? Então</Text>
-                    <Text style={styles.signupButton}> Registre-se</Text>
+                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('Register') }><Text style={styles.signupButton}> Registre-se</Text></TouchableOpacity>
                 </View>
             </KeyboardAvoidingView>
         );
