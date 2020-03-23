@@ -4,12 +4,15 @@ import Login from '../views/Login';
 import Register from '../views/Register';
 
 const PublicRouter = createStackNavigator({
-    Home: {
+    Login: {
         screen: Login
     },
     Register: {
         screen: Register
     }        
+},
+{
+    headerMode: 'none',
 });
 
 export default PublicRouter;
