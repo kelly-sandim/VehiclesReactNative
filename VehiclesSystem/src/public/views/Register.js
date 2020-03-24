@@ -10,7 +10,7 @@ import { View,
     StatusBar
 } from 'react-native';
 
-export default class Login extends Component{
+export default class Register extends Component{
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
