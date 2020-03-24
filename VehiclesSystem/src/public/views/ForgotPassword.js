@@ -26,7 +26,7 @@ export default class ForgotPassword extends Component{
                 <View style={styles.formContainer}>                    
                     <TextInput 
                         placeholder="E-mail"
-                        placeholderTextColor="rgba(255,255,255,0.7)"
+                        placeholderTextColor="rgba(0, 0, 0,0.7)"
                         returnKeyType="next"
                         keyboardType="email-address"
                         autoCapitalize="none"
@@ -57,19 +57,20 @@ const styles =  StyleSheet.create({
         alignItems: 'center',    
     },    
     logo: {
-        width: 300,
-        height: 121
+        width: 200,
+        height: 250
     },
     logoText: {
         fontSize: 18,
-        color: 'rgba(255,255,255,0.7)'
+        justifyContent: 'center',
+        color: 'rgba(0, 0, 0,0.7)'
     },
     formContainer: {
         padding: 20
     },
     input: {
         height: 40,
-        backgroundColor: 'rgba(255,255,255,0.2)',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
         marginBottom: 20,
         color: '#fff',
         paddingHorizontal: 10,
@@ -101,11 +102,11 @@ const styles =  StyleSheet.create({
        flexDirection: 'row'
     },
     signupText: {
-        color: 'rgba(255,255,255,0.7)',
+        color: 'rgba(0,0,0,0.7)',
         fontSize: 16
     },
     signupButton: {
-        color: '#ffffff',
+        color: '#0f0f0f',
         fontSize: 16,
         fontWeight: '700'
     }
