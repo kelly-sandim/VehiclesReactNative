@@ -19,7 +19,7 @@ export default class ForgotPassword extends Component{
                     barStyle="dark-content"
                 />
                 <View style={styles.logoContainer}>
-                    <Image style={styles.logo} source={require('../../../assets/orangeCar.png')}/>
+                    <Image style={styles.logo} source={require('../../../assets/crying-face.png')}/>
                     <Text style={styles.logoText}>Que triste!</Text>
                     <Text style={styles.logoText}>Mas não se preocupe, é só escrever seu e-mail, que lhe enviaremos um link, ok?</Text>
                 </View>
