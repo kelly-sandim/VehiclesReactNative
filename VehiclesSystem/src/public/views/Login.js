@@ -43,7 +43,7 @@ export default class Login extends Component{
                     </TouchableOpacity>
                 </View>
                 <View style={styles.forgotPasswordContainer}>
-                    <Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text>
+                    <TouchableOpacity onPress= { () => this.props.navigation.navigate('ForgotPassword') }><Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text></TouchableOpacity>
                 </View>
                 <View style={styles.signupTextContainer}>
                     <Text style={styles.signupText}>Não tem uma conta ainda? Então</Text>
