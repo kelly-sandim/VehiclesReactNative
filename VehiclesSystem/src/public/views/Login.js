@@ -10,6 +10,10 @@ import { View,
     StatusBar
 } from 'react-native';
 
+import { createAppContainer } from 'react-navigation';
+
+import UserRouter from '../../users/routes/UserRouter';
+
 export default class Login extends Component{ 
     constructor(props){
         super(props);
@@ -23,7 +27,7 @@ export default class Login extends Component{
         //Handler for the Submit onPress
         if (this.state.TextInputEmail != '') {          
           if (this.state.TextInputPassword != '') {
-            
+            createAppContainer(UserRouter);
           } else {
             alert('Por favor, preencha o campo de senha!');
           }

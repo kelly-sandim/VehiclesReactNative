@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "Liste Meus Carros!",
     "slug": "VehiclesSystem",
     "privacy": "public",
     "platforms": [
@@ -14,7 +14,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#3498db"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
