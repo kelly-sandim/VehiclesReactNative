@@ -21,16 +21,14 @@ export default class Login extends Component{
     
     checkTextInput = () => {
         //Handler for the Submit onPress
-        if (this.state.TextInputEmail != '') {
-          //Check for the Name TextInput
+        if (this.state.TextInputEmail != '') {          
           if (this.state.TextInputPassword != '') {
-            //Check for the Email TextInput
-            //alert('Success')
+            
           } else {
             alert('Por favor, preencha o campo de senha!');
           }
         } else {
-            alert('Por favor, preencha o campo de E-mail!');
+            alert('Por favor, preencha o campo de e-mail!');
         }
     };
 

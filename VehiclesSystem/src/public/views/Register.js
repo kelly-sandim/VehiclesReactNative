@@ -11,6 +11,32 @@ import { View,
 } from 'react-native';
 
 export default class Register extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            TextInputName: '',
+            TextInputEmail: '',
+            TextInputPassword: '',
+        };        
+    }
+
+    checkTextInput = () => {
+        //Handler for the Submit onPress
+        if(this.state.TextInputName != '') {
+            if (this.state.TextInputEmail != '') {          
+                if (this.state.TextInputPassword != '') {
+                    
+                } else {
+                    alert('Por favor, preencha o campo de senha!');
+                }
+            } else {
+                alert('Por favor, preencha o campo de e-mail!');
+            }
+        } else {
+            alert('Por favor, preencha o campo de nome!');
+        }
+    };
+
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -24,12 +50,14 @@ export default class Register extends Component{
                 </View>
                 <View style={styles.formContainer}>
                     <TextInput 
+                        onChangeText={TextInputName => this.setState({ TextInputName })}                    
                         placeholder="Nome"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         returnKeyType="next"
                         style={styles.input}
                     />
                     <TextInput 
+                        onChangeText={TextInputEmail => this.setState({ TextInputEmail })}
                         placeholder="E-mail"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         returnKeyType="next"
@@ -38,12 +66,13 @@ export default class Register extends Component{
                         autoCorrect={false}
                         style={styles.input} />
                     <TextInput 
+                        onChangeText={TextInputPassword => this.setState({ TextInputPassword })}
                         placeholder="Senha"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         returnKeyType="go"
                         secureTextEntry
                         style={styles.input} />
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={this.checkTextInput}>
                         <Text style={styles.buttonText}>REGISTRAR</Text>
                     </TouchableOpacity>
                 </View>                
