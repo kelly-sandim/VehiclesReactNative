@@ -10,7 +10,29 @@ import { View,
     StatusBar
 } from 'react-native';
 
-export default class Login extends Component{  
+export default class Login extends Component{ 
+    constructor(props){
+        super(props);
+        this.state = {
+            TextInputEmail: '',
+            TextInputPassword: '',
+        };        
+    }
+    
+    checkTextInput = () => {
+        //Handler for the Submit onPress
+        if (this.state.TextInputEmail != '') {
+          //Check for the Name TextInput
+          if (this.state.TextInputPassword != '') {
+            //Check for the Email TextInput
+            //alert('Success')
+          } else {
+            alert('Por favor, preencha o campo de senha!');
+          }
+        } else {
+            alert('Por favor, preencha o campo de E-mail!');
+        }
+    };
 
     render() {
         return(
@@ -25,6 +47,7 @@ export default class Login extends Component{
                 </View>
                 <View style={styles.formContainer}>
                     <TextInput 
+                        onChangeText={TextInputEmail => this.setState({ TextInputEmail })}
                         placeholder="E-mail"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         returnKeyType="next"
@@ -33,12 +56,13 @@ export default class Login extends Component{
                         autoCorrect={false}
                         style={styles.input} />
                     <TextInput 
+                        onChangeText={TextInputPassword => this.setState({ TextInputPassword })}
                         placeholder="Senha"
                         placeholderTextColor="rgba(255,255,255,0.7)"
                         returnKeyType="go"
                         secureTextEntry
                         style={styles.input} />
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={this.checkTextInput}>
                         <Text style={styles.buttonText}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
