@@ -11,6 +11,21 @@ import { View,
 } from 'react-native';
 
 export default class ForgotPassword extends Component{
+    constructor(props){
+        super(props);
+        this.state = {     
+            TextInputEmail: '',            
+        };        
+    }
+
+    checkTextInput = () => {
+        //Handler for the Submit onPress        
+        if (this.state.TextInputEmail != '') {          
+            
+        } else {
+            alert('Por favor, preencha o campo de e-mail!');
+        }        
+    };
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -25,6 +40,7 @@ export default class ForgotPassword extends Component{
                 </View>
                 <View style={styles.formContainer}>                    
                     <TextInput 
+                        onChangeText={TextInputEmail => this.setState({ TextInputEmail })}
                         placeholder="E-mail"
                         placeholderTextColor="rgba(0, 0, 0,0.7)"
                         returnKeyType="next"
@@ -32,7 +48,7 @@ export default class ForgotPassword extends Component{
                         autoCapitalize="none"
                         autoCorrect={false}
                         style={styles.input} />                    
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={this.checkTextInput}>
                         <Text style={styles.buttonText}>ENVIAR</Text>
                     </TouchableOpacity>
                 </View>                
