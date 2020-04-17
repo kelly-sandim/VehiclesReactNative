@@ -38,41 +38,10 @@ export default class Home extends Component{
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
                 <StatusBar 
-                    backgroundColor="#2e87c2"
-                    barStyle="light-content"
+                    backgroundColor="#ffffff"
+                    barStyle="dark-content"
                 />
-                <View style={styles.logoContainer}>
-                    <Image style={styles.logo} source={require('../../../assets/orangeCar.png')}/>
-                    <Text style={styles.logoText}>Liste Meus Carros!</Text>
-                </View>
-                <View style={styles.formContainer}>
-                    <TextInput 
-                        onChangeText={TextInputEmail => this.setState({ TextInputEmail })}
-                        placeholder="E-mail"
-                        placeholderTextColor="rgba(255,255,255,0.7)"
-                        returnKeyType="next"
-                        keyboardType="email-address"
-                        autoCapitalize="none"
-                        autoCorrect={false}
-                        style={styles.input} />
-                    <TextInput 
-                        onChangeText={TextInputPassword => this.setState({ TextInputPassword })}
-                        placeholder="Senha"
-                        placeholderTextColor="rgba(255,255,255,0.7)"
-                        returnKeyType="go"
-                        secureTextEntry
-                        style={styles.input} />
-                    <TouchableOpacity style={styles.buttonContainer} onPress={this.checkTextInput}>
-                        <Text style={styles.buttonText}>LOGIN</Text>
-                    </TouchableOpacity>
-                </View>
-                <View style={styles.forgotPasswordContainer}>
-                    <TouchableOpacity onPress= { () => this.props.navigation.navigate('ForgotPassword') }><Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text></TouchableOpacity>
-                </View>
-                <View style={styles.signupTextContainer}>
-                    <Text style={styles.signupText}>Não tem uma conta ainda? Então</Text>
-                    <TouchableOpacity onPress={ () => this.props.navigation.navigate('Register') }><Text style={styles.signupButton}> Registre-se</Text></TouchableOpacity>
-                </View>
+                
             </KeyboardAvoidingView>
         );
     }
@@ -80,7 +49,7 @@ export default class Home extends Component{
 
 const styles =  StyleSheet.create({
     container: {
-        backgroundColor: '#3498db',
+        backgroundColor: '#ffffff',
         flex: 1,
         justifyContent: 'center'
     },

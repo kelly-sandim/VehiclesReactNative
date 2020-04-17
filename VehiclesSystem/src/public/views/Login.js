@@ -27,7 +27,8 @@ export default class Login extends Component{
         //Handler for the Submit onPress
         if (this.state.TextInputEmail != '') {          
           if (this.state.TextInputPassword != '') {
-            createAppContainer(UserRouter);
+            //createAppContainer(UserRouter);
+            this.props.navigation.navigate('Home');
           } else {
             alert('Por favor, preencha o campo de senha!');
           }
