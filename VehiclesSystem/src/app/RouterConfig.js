@@ -1,14 +1,20 @@
 import PublicRouter from '../public/routes/PublicRouter';
 import UserRouter from '../users/routes/UserRouter';
+import { createSwitchNavigator } from 'react-navigation';
 
-export default class RouterConfig {
-    render()
+
+
+
+// create switch navigation with authentication flow and main app
+const RouterConfig  = createSwitchNavigator(
     {
-        const routes = {
-            public: new PublicRouter(),
-            user: new UserRouter()            
-        };    
+      Login: PublicRouter,
+      App: UserRouter
+    },
+    {
+      initialRouteName: 'Login'
     }
-    
-    //routes.public.render() ou routes.user.render()
-}
+  );
+
+//routes.public.render() ou routes.user.render()
+export default RouterConfig;
