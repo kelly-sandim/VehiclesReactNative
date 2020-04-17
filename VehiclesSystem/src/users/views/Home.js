@@ -11,6 +11,9 @@ import { View,
 } from 'react-native';
 
 import UserRouter from '../../users/routes/UserRouter';
+import { Appbar } from 'react-native-paper';
+
+
 
 export default class Home extends Component{ 
     constructor(props){
